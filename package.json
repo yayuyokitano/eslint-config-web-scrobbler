@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-web-scrobbler",
+  "version": "0.0.1",
+  "author": "Alexey <alex.esprit@gmail.com>",
+  "description": "ESLint configuration file for Web Scrobbler projects",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-scrobbler/eslint-config-web-scrobbler.git"
+  },
+  "keywords": [
+    "config",
+    "eslint",
+    "eslint-config"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "eslint-plugin-jsdoc": "^23.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "scripts": {
+    "lint": "eslint --config index.js ."
+  }
+}
