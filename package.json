@@ -24,12 +24,14 @@
     "eslint-plugin-jsdoc": "25.4.2"
   },
   "devDependencies": {
-    "eslint": "7.1.0"
+    "eslint": "7.1.0",
+    "prettier-config-web-scrobbler": "^0.1.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
   },
   "scripts": {
     "lint": "eslint --config index.js ."
-  }
+  },
+  "prettier": "prettier-config-web-scrobbler"
 }
