@@ -1,20 +1,16 @@
 'use strict';
 
 module.exports = {
-	'env': {
-		'es6': true,
-		'node': true,
+	env: {
+		es6: true,
+		node: true,
 	},
-	'parserOptions': {
-		'ecmaVersion': '2017'
+	parserOptions: {
+		ecmaVersion: '2017',
 	},
-	'extends': [
-		'eslint:recommended'
-	],
-	'plugins': [
-		'jsdoc'
-	],
-	'rules': {
+	extends: ['eslint:recommended'],
+	plugins: ['jsdoc'],
+	rules: {
 		/*
 		 * Possible errors
 		 */
@@ -34,10 +30,10 @@ module.exports = {
 		 */
 
 		// Enforce consistent brace style for all control statements
-		'curly': 'error',
+		curly: 'error',
 
 		// Require the use of === and !==
-		'eqeqeq': 'error',
+		eqeqeq: 'error',
 
 		// Disallow `else` blocks after `return` statements in `if` statements
 		'no-else-return': 'error',
@@ -65,7 +61,7 @@ module.exports = {
 		 */
 
 		// Require global strict mode directive
-		'strict': ['error', 'global'],
+		strict: ['error', 'global'],
 
 		/*
 		 * Stylistic issues
@@ -80,10 +76,10 @@ module.exports = {
 		'array-bracket-spacing': ['error', 'never'],
 
 		// Require CamelCase
-		'camelcase': ['error', { 'properties': 'never' }],
+		camelcase: ['error', { properties: 'never' }],
 
 		// Require space after comma
-		'comma-spacing': ['error', { 'after': true }],
+		'comma-spacing': ['error', { after: true }],
 
 		// Require newline at the end of files
 		'eol-last': ['error', 'always'],
@@ -93,14 +89,10 @@ module.exports = {
 
 		// Use tabs as indentation
 		// Enforce indentation level for case clauses in switch statements
-		'indent': [
-			'error', 'tab', { 'SwitchCase': 1 }
-		],
+		indent: ['error', 'tab', { SwitchCase: 1 }],
 
 		// Require space after colon in object literal properties
-		'key-spacing': [
-			'error', { 'afterColon': true }
-		],
+		'key-spacing': ['error', { afterColon: true }],
 
 		// Require space before and after keywords
 		'keyword-spacing': 'error',
@@ -109,9 +101,7 @@ module.exports = {
 		'linebreak-style': ['error', 'unix'],
 
 		// Disallow empty block statements
-		'no-empty': [
-			'error', { 'allowEmptyCatch': true }
-		],
+		'no-empty': ['error', { allowEmptyCatch: true }],
 
 		// Disallow `if` statements as the only statement in `else` blocks
 		'no-lonely-if': 'error',
@@ -137,17 +127,20 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 
 		// Require single quotes
-		'quotes': ['error', 'single'],
+		quotes: ['error', 'single'],
 
 		// Require space before blocks
 		'space-before-blocks': ['error', 'always'],
 
 		// Disallow a space before function parenthesis
-		'space-before-function-paren': ['error', {
-			'named': 'never',
-			'anonymous': 'never',
-			'asyncArrow': 'always',
-		}],
+		'space-before-function-paren': [
+			'error',
+			{
+				named: 'never',
+				anonymous: 'never',
+				asyncArrow: 'always',
+			},
+		],
 
 		// Disallow spaces inside of parentheses
 		'space-in-parens': 'error',
@@ -159,12 +152,10 @@ module.exports = {
 		'spaced-comment': 'error',
 
 		// Require semicolon at the end of statement
-		'semi': ['error', 'always'],
+		semi: ['error', 'always'],
 
 		// Enforce spacing around colons of switch statements
-		'switch-colon-spacing': [
-			'error', { 'after': true, 'before': false }
-		],
+		'switch-colon-spacing': ['error', { after: true, before: false }],
 
 		/*
 		 * ECMAScript 6
@@ -182,9 +173,7 @@ module.exports = {
 
 		// Require `const` declarations for variables
 		// that are never reassigned after declared
-		'prefer-const': [
-			'error', { 'destructuring': 'all' }
-		],
+		'prefer-const': ['error', { destructuring: 'all' }],
 
 		// Require template literals instead of string concatenation
 		'prefer-template': 'error',
@@ -199,9 +188,7 @@ module.exports = {
 		'jsdoc/check-param-names': 'warn',
 		'jsdoc/check-syntax': 'warn',
 		'jsdoc/check-tag-names': 'warn',
-		'jsdoc/check-types': [
-			'warn', { 'noDefaults': true }
-		],
+		'jsdoc/check-types': ['warn', { noDefaults: true }],
 		'jsdoc/no-undefined-types': 'warn',
 		'jsdoc/require-param': 'warn',
 		'jsdoc/require-param-description': 'warn',
@@ -212,11 +199,12 @@ module.exports = {
 		'jsdoc/require-returns-type': 'warn',
 		'jsdoc/valid-types': 'warn',
 	},
-	'settings': {
-		'jsdoc': {
-			'tagNamePreference': {
-				'class': 'constructor', 'returns': 'return'
-			}
+	settings: {
+		jsdoc: {
+			tagNamePreference: {
+				class: 'constructor',
+				returns: 'return',
+			},
 		},
 	},
 };
