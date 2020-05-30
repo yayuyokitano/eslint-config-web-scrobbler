@@ -79,7 +79,16 @@ module.exports = {
 		camelcase: ['error', { properties: 'never' }],
 
 		// Require or disallow trailing commas
-		'comma-dangle': ['error', 'always-multiline'],
+		'comma-dangle': [
+			'error',
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'never',
+				exports: 'never',
+				functions: 'never',
+			},
+		],
 
 		// Require space after comma
 		'comma-spacing': ['error', { after: true }],
