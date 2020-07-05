@@ -19,8 +19,8 @@ module.exports = {
 		// in the right direction
 		'for-direction': 'error',
 
-		// Disallow unnecessary parentheses
-		'no-extra-parens': 'error',
+		// Allow unnecessary parentheses
+		'no-extra-parens': 'off',
 
 		// Disallow template literal placeholder syntax in regular string
 		'no-template-curly-in-string': 'error',
@@ -114,8 +114,6 @@ module.exports = {
 
 		// Disallow empty block statements
 		'no-empty': ['error', { allowEmptyCatch: true }],
-
-		'no-extra-parens': 'off',
 
 		// Disallow `if` statements as the only statement in `else` blocks
 		'no-lonely-if': 'error',
