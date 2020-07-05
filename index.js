@@ -84,7 +84,7 @@ module.exports = {
 			{
 				arrays: 'always-multiline',
 				objects: 'always-multiline',
-				imports: 'never',
+				imports: 'always-multiline',
 				exports: 'never',
 				functions: 'never',
 			},
@@ -115,6 +115,8 @@ module.exports = {
 		// Disallow empty block statements
 		'no-empty': ['error', { allowEmptyCatch: true }],
 
+		'no-extra-parens': 'off',
+
 		// Disallow `if` statements as the only statement in `else` blocks
 		'no-lonely-if': 'error',
 
@@ -139,7 +141,13 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 
 		// Require single quotes
-		quotes: ['error', 'single'],
+		quotes: [
+			'error',
+			'single',
+			{
+				avoidEscape: true,
+			},
+		],
 
 		// Require space before blocks
 		'space-before-blocks': ['error', 'always'],
