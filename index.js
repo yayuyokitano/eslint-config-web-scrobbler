@@ -5,11 +5,39 @@ module.exports = {
 		es6: true,
 		node: true,
 	},
-	parserOptions: {
-		ecmaVersion: '2017',
-	},
-	extends: ['eslint:recommended'],
-	plugins: ['jsdoc'],
+	extends: ['plugin:vue/base'],
+	overrides: [
+		{
+			files: '*.ts',
+			extends: [
+				'plugin:@typescript-eslint/eslint-recommended',
+				'plugin:@typescript-eslint/recommended',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+			],
+			parser: '@typescript-eslint/parser',
+			parserOptions: {
+				project: 'tsconfig.json',
+				tsconfigRootDir: '.',
+			},
+			plugins: ['@typescript-eslint'],
+			rules: {
+				'@typescript-eslint/no-floating-promises': 'off',
+			},
+		},
+		{
+			files: '*.js',
+			extends: ['eslint:recommended'],
+			parserOptions: {
+				ecmaVersion: '2017',
+			},
+			rules: {
+				strict: ['error', 'global'],
+
+				'jsdoc/no-undefined-types': 'warn',
+			},
+		},
+	],
+	plugins: ['jsdoc', 'vue'],
 	rules: {
 		/*
 		 * Possible errors
@@ -55,13 +83,6 @@ module.exports = {
 
 		// Disallow redundant return statements
 		'no-useless-return': 'error',
-
-		/*
-		 * Strict mode
-		 */
-
-		// Require global strict mode directive
-		strict: ['error', 'global'],
 
 		/*
 		 * Stylistic issues
@@ -207,7 +228,6 @@ module.exports = {
 		'jsdoc/check-syntax': 'warn',
 		'jsdoc/check-tag-names': 'warn',
 		'jsdoc/check-types': ['warn', { noDefaults: true }],
-		'jsdoc/no-undefined-types': 'warn',
 		'jsdoc/require-param': 'warn',
 		'jsdoc/require-param-description': 'warn',
 		'jsdoc/require-param-name': 'warn',
