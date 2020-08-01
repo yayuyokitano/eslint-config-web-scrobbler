@@ -34,7 +34,7 @@
     "eslint": ">=7"
   },
   "scripts": {
-    "lint": "eslint --config index.js ."
+    "lint": "eslint --config index.js"
   },
   "prettier": "prettier-config-web-scrobbler"
 }
