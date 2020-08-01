@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "eslint": "7.5.0",
-    "prettier-config-web-scrobbler": "^0.1.0"
+    "prettier-config-web-scrobbler": "0.1.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
