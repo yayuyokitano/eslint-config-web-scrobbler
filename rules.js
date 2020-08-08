@@ -2,9 +2,9 @@
 
 const jsRules = {
 	files: '*.js',
-	extends: ['eslint:recommended'],
 	parserOptions: {
 		ecmaVersion: '2017',
+		sourceType: 'module',
 	},
 	rules: {
 		strict: ['error', 'global'],
@@ -31,13 +31,18 @@ const tsRules = {
 	},
 };
 
+const vueRules = {
+	files: '*.vue',
+	extends: ['plugin:vue/essential'],
+};
+
 const baseRules = {
 	env: {
 		es6: true,
 		node: true,
 	},
-	extends: ['plugin:vue/base'],
-	plugins: ['jsdoc', 'vue'],
+	extends: ['eslint:recommended'],
+	plugins: ['jsdoc'],
 	rules: {
 		/*
 		 * Possible errors
@@ -251,4 +256,5 @@ module.exports = {
 	baseRules,
 	jsRules,
 	tsRules,
+	vueRules,
 };
