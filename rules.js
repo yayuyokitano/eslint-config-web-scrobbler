@@ -29,6 +29,7 @@ const tsRules = {
 	},
 	plugins: ['@typescript-eslint'],
 	rules: {
+		'@typescript-eslint/ban-ts-comment': 'off',
 		'@typescript-eslint/no-floating-promises': 'off',
 		'jsdoc/no-types': 'warn',
 	},
