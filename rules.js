@@ -10,6 +10,8 @@ const jsRules = {
 		strict: ['error', 'global'],
 
 		'jsdoc/no-undefined-types': 'warn',
+		'jsdoc/require-param-type': 'warn',
+		'jsdoc/require-returns-type': 'warn',
 	},
 };
 
@@ -28,6 +30,7 @@ const tsRules = {
 	plugins: ['@typescript-eslint'],
 	rules: {
 		'@typescript-eslint/no-floating-promises': 'off',
+		'jsdoc/no-types': 'warn',
 	},
 };
 
@@ -236,10 +239,8 @@ const baseRules = {
 		'jsdoc/require-param': 'warn',
 		'jsdoc/require-param-description': 'warn',
 		'jsdoc/require-param-name': 'warn',
-		'jsdoc/require-param-type': 'warn',
 		'jsdoc/require-returns-check': 'warn',
 		'jsdoc/require-returns-description': 'warn',
-		'jsdoc/require-returns-type': 'warn',
 		'jsdoc/valid-types': 'warn',
 	},
 	settings: {
