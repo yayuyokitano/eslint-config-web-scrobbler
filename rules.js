@@ -1,5 +1,3 @@
-'use strict';
-
 const baseRules = {
 	env: {
 		es6: true,
