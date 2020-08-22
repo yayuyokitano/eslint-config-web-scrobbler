@@ -1,8 +1,8 @@
 'use strict';
 
-const { baseRules, jsRules, vueRules } = require('./rules');
+const { baseRules, jsOverrides, vueOverrides } = require('./rules');
 
 module.exports = {
 	...baseRules,
-	overrides: [jsRules, vueRules],
+	overrides: [jsOverrides, vueOverrides],
 };

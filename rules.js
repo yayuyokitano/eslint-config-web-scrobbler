@@ -1,45 +1,5 @@
 'use strict';
 
-const jsRules = {
-	files: '*.js',
-	parserOptions: {
-		ecmaVersion: '2017',
-		sourceType: 'module',
-	},
-	rules: {
-		strict: ['error', 'global'],
-
-		'jsdoc/no-undefined-types': 'warn',
-		'jsdoc/require-param-type': 'warn',
-		'jsdoc/require-returns-type': 'warn',
-	},
-};
-
-const tsRules = {
-	files: '*.ts',
-	extends: [
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:@typescript-eslint/recommended-requiring-type-checking',
-	],
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		project: 'tsconfig.json',
-		tsconfigRootDir: '.',
-	},
-	plugins: ['@typescript-eslint'],
-	rules: {
-		'@typescript-eslint/ban-ts-comment': 'off',
-		'@typescript-eslint/no-floating-promises': 'off',
-		'jsdoc/no-types': 'warn',
-	},
-};
-
-const vueRules = {
-	files: '*.vue',
-	extends: ['plugin:vue/essential'],
-};
-
 const baseRules = {
 	env: {
 		es6: true,
@@ -254,9 +214,44 @@ const baseRules = {
 	},
 };
 
-module.exports = {
-	baseRules,
-	jsRules,
-	tsRules,
-	vueRules,
+const jsOverrides = {
+	files: '*.js',
+	parserOptions: {
+		ecmaVersion: '2017',
+		sourceType: 'module',
+	},
+	rules: {
+		strict: ['error', 'global'],
+
+		'jsdoc/no-undefined-types': 'warn',
+		'jsdoc/require-param-type': 'warn',
+		'jsdoc/require-returns-type': 'warn',
+	},
 };
+
+const tsOverrides = {
+	files: '*.ts',
+	extends: [
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+	],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		project: 'tsconfig.json',
+		tsconfigRootDir: '.',
+	},
+	plugins: ['@typescript-eslint'],
+	rules: {
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'@typescript-eslint/no-floating-promises': 'off',
+		'jsdoc/no-types': 'warn',
+	},
+};
+
+const vueOverrides = {
+	files: '*.vue',
+	extends: ['plugin:vue/essential'],
+};
+
+module.exports = { baseRules, jsOverrides, tsOverrides, vueOverrides };
