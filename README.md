@@ -19,6 +19,13 @@ Then, add `eslint-config-web-scrobbler` to the `extends` array in your
 }
 ```
 
+You can use `web-scrobbler/typescript` config for projects written in TypeScript:
+```json
+{
+	"extends": ["some-other-config-you-use", "web-scrobbler/typescript"]
+}
+```
+
 ## License
 
 Licensed under the [MIT License](./LICENSE).
