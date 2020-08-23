@@ -213,8 +213,11 @@ const baseRules = {
 };
 
 const jsOverrides = {
-	files: '*.js',
+	files: ['*.js', '*.jsx'],
 	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
 		ecmaVersion: '2017',
 		sourceType: 'module',
 	},
@@ -228,7 +231,7 @@ const jsOverrides = {
 };
 
 const tsOverrides = {
-	files: '*.ts',
+	files: ['*.ts', '*.tsx'],
 	extends: [
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -236,6 +239,9 @@ const tsOverrides = {
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
 		project: 'tsconfig.json',
 		tsconfigRootDir: '.',
 	},
