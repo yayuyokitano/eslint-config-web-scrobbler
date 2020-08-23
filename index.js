@@ -1,6 +1,6 @@
 const { baseRules } = require('./rules');
-const { jsOverrides, vueOverrides } = require('./overrides');
+const { jsOverrides } = require('./overrides');
 
 module.exports = Object.assign({}, baseRules, {
-	overrides: [jsOverrides, vueOverrides],
+	overrides: [jsOverrides],
 });
