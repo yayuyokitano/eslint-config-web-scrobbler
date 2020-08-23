@@ -10,8 +10,9 @@ You can install `eslint-config-web-scrobbler` by a following way:
 > npm install --save-dev eslint-config-web-scrobbler
 ```
 
-Then, add `eslint-config-web-scrobbler` to the `extends` array in your
-`.eslintrc.*` file.
+### JavaScript
+
+Add `web-scrobbler` to the `extends` array in your `.eslintrc.*` file:
 
 ```json
 {
@@ -19,10 +20,39 @@ Then, add `eslint-config-web-scrobbler` to the `extends` array in your
 }
 ```
 
-You can use `web-scrobbler/typescript` config for projects written in TypeScript:
+### TypeScript
+
+Install peer dependencies first:
+
+```sh
+> npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+Then, add `web-scrobbler/typescript` cto the `extends` array in your `.eslintrc.*` file:
+
 ```json
 {
 	"extends": ["some-other-config-you-use", "web-scrobbler/typescript"]
+}
+```
+
+### Vue
+
+Install peer dependencies first:
+
+```sh
+> npm install --save-dev eslint-plugin-vue
+```
+
+Then, add `web-scrobbler/vue` cto the `extends` array in your `.eslintrc.*` file:
+
+```json
+{
+	"extends": [
+		"some-other-config-you-use",
+		"web-scrobbler",
+		"web-scrobbler/vue"
+	]
 }
 ```
 
