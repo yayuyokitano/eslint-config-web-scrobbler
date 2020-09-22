@@ -35,6 +35,10 @@ const tsOverrides = {
 	rules: {
 		'@typescript-eslint/ban-ts-comment': 'off',
 		'@typescript-eslint/no-floating-promises': 'off',
+		'@typescript-eslint/restrict-template-expressions': [
+			'error',
+			{ allowAny: true },
+		],
 		'jsdoc/no-types': 'warn',
 	},
 };
