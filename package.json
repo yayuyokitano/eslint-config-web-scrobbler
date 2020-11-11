@@ -9,7 +9,8 @@
     "index.js",
     "overrides.js",
     "rules.js",
-    "typescript.js"
+    "typescript.js",
+    "vue.js"
   ],
   "repository": {
     "type": "git",
