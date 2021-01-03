@@ -130,6 +130,7 @@ const baseRules = {
 		quotes: [
 			'error',
 			'single',
+			'backtick',
 			{
 				avoidEscape: true,
 			},
@@ -175,7 +176,7 @@ const baseRules = {
 		'no-var': 'error',
 
 		// Require method and property shorthand syntax for object literals
-		'object-shorthand': ['error', 'always'],
+		'object-shorthand': ['error', 'consistent-as-needed'],
 
 		// Require `const` declarations for variables
 		// that are never reassigned after declared
