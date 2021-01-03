@@ -130,7 +130,6 @@ const baseRules = {
 		quotes: [
 			'error',
 			'single',
-			'backtick',
 			{
 				avoidEscape: true,
 			},
