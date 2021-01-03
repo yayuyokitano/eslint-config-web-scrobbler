@@ -144,7 +144,7 @@ const baseRules = {
 			'error',
 			{
 				named: 'never',
-				anonymous: 'never',
+				anonymous: 'always',
 				asyncArrow: 'always',
 			},
 		],
