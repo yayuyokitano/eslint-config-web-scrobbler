@@ -46,6 +46,12 @@ const tsOverrides = {
 const vueOverrides = {
 	files: '*.vue',
 	extends: ['plugin:vue/essential'],
+
+	rules: {
+		'object-shorthand': ['error', 'always'],
+	},
+};
+
 };
 
 module.exports = {
