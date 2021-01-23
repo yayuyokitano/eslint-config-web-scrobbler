@@ -1,22 +1,4 @@
-const jsOverrides = {
-	files: ['*.js', '*.jsx'],
-	parserOptions: {
-		ecmaFeatures: {
-			jsx: true,
-		},
-		ecmaVersion: '2017',
-		sourceType: 'module',
-	},
-	rules: {
-		strict: ['error', 'global'],
-
-		'jsdoc/no-undefined-types': 'warn',
-		'jsdoc/require-param-type': 'warn',
-		'jsdoc/require-returns-type': 'warn',
-	},
-};
-
-const tsOverrides = {
+module.exports = {
 	files: ['*.ts', '*.tsx'],
 	extends: [
 		'plugin:@typescript-eslint/eslint-recommended',
@@ -41,21 +23,4 @@ const tsOverrides = {
 		],
 		'jsdoc/no-types': 'warn',
 	},
-};
-
-const vueOverrides = {
-	files: '*.vue',
-	extends: ['plugin:vue/essential'],
-
-	rules: {
-		'object-shorthand': ['error', 'always'],
-	},
-};
-
-};
-
-module.exports = {
-	jsOverrides,
-	tsOverrides,
-	vueOverrides,
 };

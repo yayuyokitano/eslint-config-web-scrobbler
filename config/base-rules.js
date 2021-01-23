@@ -1,4 +1,4 @@
-const baseRules = {
+module.exports = {
 	env: {
 		es6: true,
 		node: true,
@@ -211,5 +211,3 @@ const baseRules = {
 		},
 	},
 };
-
-module.exports = { baseRules };

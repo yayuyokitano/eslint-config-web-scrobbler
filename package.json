@@ -7,10 +7,9 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "overrides.js",
-    "rules.js",
     "typescript.js",
-    "vue.js"
+    "vue.js",
+    "config/**"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +28,8 @@
   },
   "devDependencies": {
     "eslint": "7.21.0",
-    "prettier-config-web-scrobbler": "0.1.0"
+    "prettier-config-web-scrobbler": "0.1.0",
+    "tape": "^5.1.1"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=3",
@@ -38,7 +38,8 @@
     "eslint-plugin-vue": ">=6"
   },
   "scripts": {
-    "lint": "eslint --config index.js *.js"
+    "lint": "eslint --config index.js \"**/*.js\"",
+    "test": "tape test/*"
   },
   "prettier": "prettier-config-web-scrobbler"
 }

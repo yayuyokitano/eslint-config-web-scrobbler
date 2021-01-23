@@ -1,6 +1,7 @@
-const { baseRules } = require('./rules');
-const { jsOverrides, tsOverrides } = require('./overrides');
+const baseRules = require('./config/base-rules');
+const javaScriptOverrides = require('./config/javascript-overrides');
+const typeScriptOverrides = require('./config/typescript-overrides');
 
 module.exports = Object.assign({}, baseRules, {
-	overrides: [jsOverrides, tsOverrides],
+	overrides: [javaScriptOverrides, typeScriptOverrides],
 });
