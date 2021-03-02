@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "eslint": "7.21.0",
+    "prettier": "^2.2.1",
     "prettier-config-web-scrobbler": "0.1.0",
     "tape": "^5.1.1"
   },
