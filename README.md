@@ -36,6 +36,8 @@ Then, add `web-scrobbler/typescript` cto the `extends` array in your `.eslintrc.
 }
 ```
 
+You don't need to include `web-scrobbler` config - `web-scrobbler/typescript` handles both JS and TS files.
+
 ### Vue
 
 Install peer dependencies first:
@@ -55,6 +57,8 @@ Then, add `web-scrobbler/vue` cto the `extends` array in your `.eslintrc.*` file
 	]
 }
 ```
+
+`web-scrobbler/vue` config is applied to Vue SFCs only, so you should add `web-scrobbler` (or `web-scrobbler/typescript`) and `web-scrobbler/vue` configs to the `extends` array.
 
 ## License
 
