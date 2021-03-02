@@ -28,7 +28,7 @@ Install peer dependencies first:
 > npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
-Then, add `web-scrobbler/typescript` cto the `extends` array in your `.eslintrc.*` file:
+Then, add `web-scrobbler/typescript` to the `extends` array in your `.eslintrc.*` file:
 
 ```json
 {
