@@ -117,12 +117,4 @@ module.exports = {
 		'jsdoc/require-returns-description': 'warn',
 		'jsdoc/valid-types': 'warn',
 	},
-	settings: {
-		jsdoc: {
-			tagNamePreference: {
-				class: 'constructor',
-				returns: 'return',
-			},
-		},
-	},
 };
